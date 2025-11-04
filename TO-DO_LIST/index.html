@@ -1,0 +1,84 @@
+<!-- npx tailwindcss -i ./TO-DO_LIST/input.css -o ./TO-DO_LIST/output.css --watch run this in terminl -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TO do list for myself</title>
+    <link rel="stylesheet" href="./output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:wght@300..900&family=Momo+Signature&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .completed {
+        text-decoration: line-through;
+        opacity: 0.7;
+      }
+      .bg-color {
+        background-color: rgba(232, 0, 143, 0.315);
+      }
+    </style>
+  </head>
+  <body class="flex bg-fuchsia-200 h-screen relative flex-col">
+    <div>
+      <div
+        class="w-50 h-50 bg-blue-300 rounded-full absolute left-120 bottom-90 p-45 mix-blend-multiply blur-xl opacity-80 animate-blob animation-delay-2000"
+      ></div>
+      <div
+        class="w-50 h-50 bg-red-200 rounded-full absolute left-220 bottom-90 p-45 mix-blend-multiply blur-xl opacity-80 animate-blob animation-delay-2000"
+      ></div>
+      <div
+        class="w-50 h-50 bg-purple-300 rounded-full absolute left-250 bottom-30 p-45 mix-blend-multiply blur-xl opacity-80 animate-blob animation-delay-4000"
+      ></div>
+      <div
+        class="w-50 h-50 bg-rose-200 rounded-full absolute left-180 bottom-30 p-45 mix-blend-multiply blur-xl opacity-80 animate-blob"
+      ></div>
+      <div
+        class="w-50 h-50 bg-teal-200 rounded-full absolute left-60 bottom-40 p-45 mix-blend-multiply blur-xl opacity-80 animate-blob animation-delay-4000"
+      ></div>
+      <div
+        class="w-50 h-50 bg-yellow-200 rounded-full absolute left-140 bottom-20 p-45 mix-blend-multiply blur-xl opacity-80 animate-blob animation-delay-6000"
+      ></div>
+    </div>
+
+    <div
+      class="text-6xl mt-7 text-black font-bold flex justify-center m-10 gap-5 font-['Momo_Signature']"
+    >
+      <div class="[-webkit-text-stroke:1px_rgb(249,168,212)] text-white">
+        To-Do List
+      </div>
+      <img
+        src="https://images.vexels.com/media/users/3/206315/isolated/lists/9fc5c0cd81aefc439a703d6a438e81ef-school-notes-doodle.png"
+        alt="notes logo"
+        class="size-18"
+      />
+    </div>
+    <div class="flex items-center flex-col">
+      <div
+        class="backdrop-blur-xl bg-white/40 border-white/20 border-solid border-2 p-10 rounded-3xl w-150 shadow-sm"
+      >
+        <div class="flex gap-20 justify-center">
+          <input
+            type="text"
+            placeholder="Add a new task..."
+            class="bg-fuchsia-100 rounded-lg p-2 text-center text-pink-300 border-2 border-solid border-pink-300/50 shadow-md focus:outline-none focus:ring-1 focus:ring-pink-400 focus:scale-105 transition ease-in duration-100"
+            id="input-box"
+          />
+          <button
+            class="bg-fuchsia-400 p-2 rounded-md text-white border-white/60 border-solid border-2 text-center hover:bg-fuchsia-600 cursor-pointer shadow-lg/10 hover:scale-105 hover:translate-y-0.5 transition ease-in-out duration-150"
+            id="add-btn"
+          >
+            Add Task +
+          </button>
+        </div>
+        <div class="m-10">
+          <ul id="todolist" class="flex flex-col items-center gap-7"></ul>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js" defer></script>
+  </body>
+</html>
